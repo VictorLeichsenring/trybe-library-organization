@@ -6,7 +6,9 @@ const fantasyOrScienceFiction = () =>
 
 // Requisito 2
 const oldBooksOrdered = (year) => {
-  // escreva seu código aqui
+  const currentYear = new Date().getFullYear();
+  return books.filter(book => (currentYear - book.releaseYear) > 60 && book.releaseYear <= year)
+              .sort((a, b) => a.releaseYear - b.releaseYear);
 };
 
 // Requisito 3
