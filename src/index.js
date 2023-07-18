@@ -28,8 +28,11 @@ const fantasyOrScienceFictionAuthors = () => {
 
 // Requisito 5
 const oldBooks = (year) => {
-  // escreva seu código aqui
+  const currentYear = new Date().getFullYear();
+  return books.filter((book) => (currentYear - book.releaseYear) > 60 && book.releaseYear <= year)
+              .map((book) => book.name);
 };
+
 
 // Requisito 6
 const authorWith3DotsOnName = () => {
