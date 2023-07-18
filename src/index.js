@@ -1,10 +1,8 @@
 const { books } = require('../data/library');
 
 // Requisito 1
-const fantasyOrScienceFiction = () => {
-  // escreva seu código aqui
-  // Iniciando o projeto
-};
+const fantasyOrScienceFiction = () =>
+  books.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica');
 
 // Requisito 2
 const oldBooksOrdered = (year) => {
