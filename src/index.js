@@ -13,8 +13,10 @@ const oldBooksOrdered = (year) => {
 
 // Requisito 3
 const booksByAuthorBirthYear = (birthYear) => {
-  // escreva seu código aqui
+  return books.filter((book) => book.author.birthYear === birthYear)
+              .map((book) => book.name);
 };
+
 
 // Requisito 4
 const fantasyOrScienceFictionAuthors = () => {
